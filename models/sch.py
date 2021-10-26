@@ -9,18 +9,17 @@ from tools.read import readFromFile
 
 class Simaan():
     def __init__(self):
-        #Simulation Time
+        
         self.start_t = readFromFile('start_t')
         self.passo = readFromFile('step')
         self.end_t = readFromFile('end_t')
  
-        #Uses the already created Time Scale
         self.T = list(np.arange(self.start_t,self.end_t,self.passo)) #
         self.n = len(self.T)
         
         #Cardiovascular System
         self.HR = readFromFile('HR')
-        self.Emax = readFromFile('Emax') #Amplitude da função elastância
+        self.Emax = readFromFile('Emax')
         self.Emin = readFromFile('Emin')
         self.tc = 60/self.HR #Intervalo de tempo referente à duração de um ciclo cardíaco
         self.t_max = 0.2 + 0.15*self.tc; #Tempo máximo da duração de um ciclo cardíaco
