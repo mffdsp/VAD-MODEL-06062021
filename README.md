@@ -2,9 +2,9 @@
 
 Import automático:
 
-```
+``
 python init.py -m initproject  
-```
+``
 
 Manualmente com pip:
 
